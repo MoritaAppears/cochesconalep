@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title> Honda Civic </title>
+<style type="text/css">
+
+
+.imagen{
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+width: 1180px;
+height:600px;
+}
+.titulo {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.subtitulo {
+    font-size: 40px;
+    color: black;
+    font-style: Impact, sans-serif;
+
+    margin-bottom: 30px;
+}
+.contenido {
+    margin-right: 30px;
+}
+.conta {
+    display: flex;
+    align-items: center; 
+}
+.text{
+font-family:Calibri,  sans-serif;
+   font-size: 20px;
+   text-align: justify;
+   
+
+}
+
+.boton {
+            margin: 20px auto;
+            border: 5px;
+            background-color: #270c0c;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            cursor: pointer;
+            width: 400px;
+            height: 70px;
+            border-radius: 8px; 
+        }
+
+        .articulo{
+            
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding: 30px;
+            align-items: center;
+            margin: 50px;
+            border:2px solid;
+        }
+        .imagenarti{
+            align-items: center;
+width: 600px;
+height:420px;
+}
+.precio{
+    position: absolute;
+    top: 500px;
+    left: 90px;
+}
+.subtituloprecio {
+    font-size: 35px;
+    color: black;
+    font-style: Impact, sans-serif;
+    margin-bottom: 30px;
+}
+</style>
+</head>
+<body>
+
+
+<center
+    <header style="border: 23px solid #463f3f ;">
+        <h3><p class="precio subtituloprecio"style="color: white;">DESDE $550,000</p></h3>
+<img src="D:\PAGINA PROYECTO\Imágenes\HondaCiviv.jpg"  alt="Honda Civic" class="imagen";>
+</center>
+</header>
+<br>
+
+
+
+<div style="text-align: justify; background-color:whitesmoke; " class="text articulo" >
+    <img src="D:\PAGINA PROYECTO\Imágenes\honda-civic-apariencia-1.jpg" alt="de lado" class="imagenarti">
+<p> La 11ª generación de Honda Civic llega completamente renovada y una vez más, reafirma el porqué se ha convertido en un icónico sedán para todos.
+Honda Civic no es para cualquier conductor. Muestra un diseño aerodinámico y sin saturaciones, un diseño que da de qué hablar. Sus dimensiones como su frente ahora más alargado, le suman presencia consiguiendo una silueta más robusta y deportiva. Cuenta con luces de marcha diurna (DRL) LED, faros de niebla LED, rines de aluminio de 18" y tapa de cajuela con apertura completa. Con solo verlo, vas a querer vivirlo. </p>
+</div>
+
+<br><center>
+<img src="D:\PAGINA PROYECTO\Imágenes\honda-civic-interior-1.jpg" width="1280px";>
+</center>
+<div style="text-align:center;" class="text">
+    <p class="subtitulo"> REINVENTA TU INTERIOR</p>
+<p> Su cabina presenta un diseño atemporal y cuenta con un estilo minimalista y estimulante con atención al detalle. Siguiendo la filosofía Man-Maximum, Machine-Minimum de Honda, se maximiza el espacio interior, optimiza la ergonomía y mejora la visibilidad de todos los pasajeros. El asiento delantero cuenta con un rediseño estabilizador con una sujeción superior a la carrocería, mejorando la comodidad en viajes largos. </p>
+<br>
+</div>
+
+<br>
+<br>
+
+
+<center>
+<h2 class="subtitulo" style="color: #3f2323;"> CARACTERÍSTICAS DEL AUTO </h2>
+</center>
+<br>
+<br>
+
+
+<section style="height:500px;background-color:white;widht:400px;display:table-cell; alling-items:center; text-align: center;>
+<br>
+
+<div class="conta">
+Control de Velocidad Crucero Adaptativo (ACC) con limitador de velocidad personalizable.
+<br>
+<br>
+<img src="D:\PAGINA PROYECTO\Imágenes\ACC.png" widht="100"; height="200";> 
+<br>
+<br>
+<br>
+</div>
+
+<br>
+Función de seguimiento a baja velocidad (Low Speed Follow).
+<br>
+<br>
+
+<img src="D:\PAGINA PROYECTO\Imágenes\LSF.png" widht="100"; height="200";>
+<br>
+<br>
+<br>
+
+<br>
+
+Sistema Automático de Luces Altas (Auto High Beam).
+<br>
+<br>
+<img src="D:\PAGINA PROYECTO\Imágenes\AHB.png" widht="100"; height="200";>
+<br>
+<br>
+<br>
+<br>
+
+
+</section>   
+
+<aside style="height:200px;background-color:white;display:table-cell;width:50%; text-align: center;">
+
+Sistema de Conservación de Carril (LKAS) Lane Keep Assist + Alerta de Cambio de Carril (LDW) Lane Departure Warning.
+<br>
+<br>
+
+<img src="D:\PAGINA PROYECTO\Imágenes\RDMS.png"widht="100"; height="200";>
+<br>
+<br>
+
+<br>
+
+
+Sistema de Mitigación de Colisión con Frenado (CMBS) Collision Mitigation Braking System.
+<br>
+<br>
+
+<img src="D:\PAGINA PROYECTO\Imágenes\CMBS.png" widht="100"; height="200";>
+<br>
+<br>
+
+<br>
+<br>
+
+Sistema de Mitigación de Salida de Carretera (Road Departure Mitigation System).
+<br>
+<br>
+
+<img src="D:\PAGINA PROYECTO\Imágenes\BSI.png" widht="100"; height="200";>
+<br>
+<br>
+
+</aside>
+
+
+<center><button class="boton" onclick="enviar(), llenarcampos(550000,12)">Comprar</button></center> 
+</body>
+
+
+
+
+<script>
+    function enviar() {
+     window.location.href = 'compra.html'; // Reemplaza con la URL de destino
+ }
+ function llenarcampos(coche,poranual){
+              localStorage.setItem('precio',coche);
+              localStorage.setItem('poranual', poranual)
+                window.location.href = 'compra.html';
+                }
+
+ </script>
+</html> 

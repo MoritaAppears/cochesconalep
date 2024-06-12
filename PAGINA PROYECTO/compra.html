@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+<meta charset="UTF-8">
+<title>CALCULADORA</title>
+<style type="text/css">
+
+/*CLASE CSS PARA EL FORMULARIO*/
+.formulario{ 
+display: block;
+margin: auto;
+border-radius: 10px;
+width: 80%;
+background-color: #cac997;
+box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.container {
+      display: flex; /* Usar sflexbox para la distribución en columnas */
+      flex-direction: row; /* Disponer los elementos en fila */
+      flex-wrap: wrap; /* Permitir que los elementos se envuelvan en varias filas si es necesario */
+      justify-content: space-between; /* Distribuir el espacio entre los elementos */
+      align-items: center; /* Alinear los elementos verticalmente */
+    }
+
+    .column {
+      flex: 1 0 33.33%; /* Asignar un ancho base del 33.33% a cada columna */
+      padding: 10px; /* Añadir espacio interno a las columnas */
+    }
+    .numero {
+      width: 100%; /* Ancho completo para los campos de entrada */
+      padding: 5px; /* Espacio interno en los campos de entrada */
+      border: 1px solid #ccc; /* Borde para los campos de entrada */
+      border-radius: 5px; /* Bordes redondeados para los campos de entrada */
+    }
+.boton {
+    background-color: #4CAF50; /* Color de fondo verde */
+  border: none; /* Sin borde */
+    color: black; /* Color del texto blanco */
+  padding: 10px 20px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto centrada */
+   text-decoration: none; /* Sin decoración de texto */
+ display: inline-block; /* Mostrar como bloque en línea */
+    font-size: 16px; /* Tamaño de fuente */
+   margin: 4px 2px; /* Margen exterior */
+ cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    border-radius: 8px; /* Bordes redondeados */
+}
+.label{
+   font-size: 18px; /* Tamaño de fuente */
+  color: #333; /* Color del texto */
+    margin-bottom: 10px; /* Margen inferior */
+    display: block; /* Mostrar como bloque */
+    text-align: left;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.titulo {
+    justify-content: center;
+  text-align: center; /* Alinear el texto en el centro */
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px; /* Tamaño de fuente más grande para el título */
+  font-weight: bold; /* Peso de fuente más grueso para destacar el título */
+  margin-bottom: 20px; /* Espacio inferior para separar el título del contenido */
+  color: #065717; /* Color de texto similar al resto de la página */
+}
+
+
+
+</style>
+</head>
+
+<body >
+   
+<div class="formulario">
+<form name="calc" id="calc">
+<center><h1 class="titulo">COTIZACION<br><br><br></center>
+</h1>
+<div class="container">
+     <div class="column">
+<label class="label" for= "COCHE">PRECIO DEL COCHE</label>
+<input type="number" id="COCHE" name="COCHE" value="" class="numero"><br><br>
+     </div>
+     <div class="column">
+<label class="label" for= "txtnumero1">ENGANCHE</label>
+<input type="number" id="txtnumero1" name="txtnumero1" value="" class="numero"></CENTER><br><br>
+</div>
+<div class="column">
+<label class="label" for= "txtnumero2">PORCENTAJE ANUAL</label>
+<input type="number" id="txtnumero2" name="txtnumero2" value="" class="numero"></CENTER><br><br>
+</div>
+<div class="column">
+<label class="label" for= "txtnumero4">NUMERO DE MENSUALIDADES</label>
+<input type="number" id="txtnumero4" name="txtnumero4" value="" class="numero"><br><br>
+</div>
+<div class="column">
+<label class="label" for= "años">AÑOS A PAGAR</label>
+<input type="number" id="años" name="años" value="0"> <br><br>
+</div>
+<div class="column">
+<label class="label" for= "interesanual">PRECIO INTERES ANUAL</label>
+<input type="text" id="interesanual" name="interesanual" value="0"> <br><br>
+</div>
+<div class="column">
+<label class="label" for= "interesfinal">INTERES FINAL</label>
+<input type="text" id="interesfinal" name="interesfinal" value="0"> <br><br>
+</div>
+<div class="column">
+<label class="label" for= "preciofinal">PRECIO NETO</label>
+<input type="text" id="preciofinal" name="preciofinal" value="0"> <br><br>
+</div>
+<div class="column">
+<label class="label" for= "financiado">PRECIO BRUTO</label>
+<input type="text" id="financiado" name="financiado" value="0"> <br><br>
+</div>
+<div class="column">
+<label class="label" for= "mensualidades">COSTO DE MENSUALIDADES</label>
+<input type="text" id="mesualidades" name="mensualidades" value="0"> <br><br>
+ </div>
+</div>
+
+<input type="button" class="boton" id="" name="" value="LIMPIAR" onclick="cuenta('limpiar')" >
+<input type="button" class="boton" id="" name="" value="CALCULAR" onclick="calcular()" > 
+
+
+</form>
+</div>
+</body>
+
+<script type="text/javascript">
+function cuenta(tipo){
+
+var año;
+año= parseFloat(document.calc.años.value);
+
+var coche;
+coche= parseFloat(document.calc.COCHE.value);
+
+var enganche;
+enganche= parseFloat(document.calc.txtnumero1.value);
+
+var poranual;
+poranual= parseFloat(document.calc.txtnumero2.value);
+
+var nmeses;
+nmeses= parseFloat(document.calc.txtnumero4.value);
+
+
+if(tipo=="limpiar"){
+
+document.calc.txtnumero1.value="";
+
+document.calc.txtnumero4.value="";
+document.calc.años.value="0";
+document.calc.interesanual.value="0";
+document.calc.interesfinal.value="0";
+document.calc.preciofinal.value="0";
+document.calc.financiado.value="0";
+document.calc.mensualidades.value="0";
+return;
+ 
+}
+
+
+if(tipo=="añoss"){
+  var año = parseInt(document.calc.txtnumero4.value);
+  var año =  año / 12
+  document.calc.años.value= parseInt(año);
+}
+
+//PARA CALCULAR EL PRECIO DEL INTERES ANUAL
+//PRECIO DEL AUTO*PORCENTAJE ANUAL
+
+if(tipo=="interesanual"){
+var interesanual;
+var interesanualpor;
+interesanualpor=  poranual /  100;
+interesanual= coche * interesanualpor;
+document.calc.interesanual.value=interesanual;
+}
+
+//PARA CALCULAR INTERES FINAL
+//INTERES ANUAL * AÑOS
+
+if(tipo=="interesfinal"){
+var interesanual= parseFloat(document.calc.interesanual.value);
+var interesfinal;
+interesfinal= interesanual * año;
+document.calc.interesfinal.value=interesfinal;
+}
+
+//PARA CALCULAR PRECIO FINAL
+//PRECIO NETO DEL AUTO (precio del coche) + INTERES FINAL
+
+if(tipo=="precio final"){
+var interesfinal= parseFloat(document.calc.interesfinal.value);
+var prefinal = coche + interesfinal;
+document.calc.preciofinal.value=prefinal;
+}
+
+//PARA CALCULAR FINACIADO
+//PRECIO FINAL * ENGANCHE
+
+if(tipo=="financiado"){
+var prefinal= parseFloat(document.calc.preciofinal.value);
+var finan= prefinal - enganche;
+document.calc.financiado.value=finan;
+}
+
+//PARA CALCULAR MENSUALIDADES
+//FINANCIADO / NUMERO DE MESES
+
+if(tipo=="mensualidades"){
+var finan= parseFloat(document.calc.financiado.value);
+var men = finan / nmeses;
+
+document.calc.mensualidades.value=parseInt(men);
+}
+
+
+}     //aqui termina la funcion cuenta
+
+
+
+//PARA PONER EL ORDEN
+//se pone aqui el nombre de la operacion
+
+function calcular(){
+if(validarCampos()){
+cuenta('añoss')
+cuenta('interesanual');
+cuenta('interesfinal');
+cuenta('precio final');
+cuenta('financiado');
+cuenta('mensualidades');
+}
+}
+
+
+ function validarCampos() {
+            var coche = document.calc.COCHE.value;
+            var enganche = document.calc.txtnumero1.value;
+            var poranual = document.calc.txtnumero2.value;
+            var nmeses = document.calc.txtnumero4.value;
+            var año = document.calc.años.value;
+
+            if (!coche || coche <= 0) {
+                alert("Por favor, introduzca un precio válido para el coche.");
+                return false;
+            }
+
+            if (!enganche || enganche < 0) {
+                alert("Por favor, introduzca un enganche válido.");
+                return false;
+            }
+
+            if (!poranual || poranual <= 0) {
+                alert("Por favor, introduzca un porcentaje anual válido.");
+                return false;
+            }
+
+            if (!nmeses || nmeses <= 0) {
+                alert("Por favor, introduzca un número de meses válido.");
+                return false;
+            }
+
+
+            return true;
+        }
+
+function llenarcamposlocales(){
+    var precio = localStorage.getItem('precio');
+    var poranual = localStorage.getItem('poranual');
+
+    if (precio) document.calc.COCHE.value = precio;
+    if (poranual) document.calc.txtnumero2.value = poranual;
+}
+ 
+ window.onload = llenarcamposlocales
+
+
+</script>
+
+</html>
+

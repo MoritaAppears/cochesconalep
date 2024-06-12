@@ -1,0 +1,65 @@
+.imagen {
+    width: 900px;
+    height: 400px;
+}
+.imagencara{
+width:300px;
+height: 200px;
+}
+
+.titulo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    color: #f70606;
+    font-weight: bold;
+}
+.subtitulo {
+    font-size: 40px;
+    color:black;
+    font-family: Impact, sans-serif;
+}
+.contenido {
+    margin-right: 30px;
+}
+.conta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.text {
+    font-size: 18px;
+    text-align: justify;
+}
+.boton {
+    margin: 20px auto;
+    border: 5px;
+    background-color: red;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    width: 400px;
+    height: 70px;
+    border-radius: 8px;
+}
+.caracteristica-item {
+    width: 48%; /* Adjust this width as needed */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.caracteristicas {
+    height: 500px;
+    background-color:white;
+    width: 400px;
+    display: table-cell;
+    padding: 10px;
+}
+aside {
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    display: flexbox;
+    flex-direction: table-cell;
+    width: 50%;
+}
